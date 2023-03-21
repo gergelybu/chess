@@ -35,7 +35,6 @@
       let draggable = false;
 
       canvas.onmousedown = (e) => {
-        console.log("onmousedown", e.layerX, e.layerY);
         if (
           e.layerX <= currentX + PAWN.width &&
           e.layerX >= currentX - PAWN.width &&
@@ -43,9 +42,7 @@
           e.layerY >= currentY - PAWN.height
         ) {
           draggable = true;
-          console.log("click image");
         } else {
-          console.log("didn't click the image");
         }
       };
       canvas.onmousemove = (e) => {
